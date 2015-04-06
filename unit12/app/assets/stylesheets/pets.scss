@@ -1,0 +1,78 @@
+// Place all the styles related to the pets controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+$bgcolor: #66CC00;
+$body-font-family: Impact, Cursive, sans-serif;
+$body-font-color: black;
+$body-font-size: 12px;
+$body-font-weight: normal;
+$body-font-style: normal;
+
+@mixin setupFont(
+$family:$body-font-family, //sets all default values to the variables specified above
+$color:$body-font-color, 
+$size:$body-font-size, 
+$weight:$body-font-weight, 
+$style:$body-font-style
+){
+  
+  font:{
+    family: $family;
+    size: $size; 
+    weight: $weight;
+    style: $style;
+  }
+  color: $color;
+}
+
+.header {
+	background-color: $bgcolor;
+	text-align: center;
+	line-height: 100px;
+	@include setupFont($family: verdana, $color: #330099, $size: 40px, $weight: bold, $style: normal);
+	width: 100%;
+	height: 100px;
+}
+
+.footer {
+	background-color: $bgcolor;
+	@include setupFont($family: cursive, $color: #330099, $size: 15px, $weight: normal, $style: normal);
+	width: 100%;
+	height: 30px;
+	line-height: 30px;
+
+	hr {
+		margin-top: 0;
+	}
+}
+
+.img {
+	margin-left: 10px;
+	margin-top: 10px;
+	float: left;
+}
+
+#pet_typeCol, #destroyCol {
+	background-color: #99FFCC;
+}
+
+#nameCol, #editCol {
+	background-color: #CCFF99;
+}
+
+#ageCol, #showCol {
+	background-color: #FFFF99;
+}
+
+#descriptionCol {
+	background-color: #99D6FF;
+}
+
+td {
+	padding: 3px;
+	margin-right: 2px;
+}
+
+#footer-content {
+	margin: 0px 0px 0px 10px;
+}

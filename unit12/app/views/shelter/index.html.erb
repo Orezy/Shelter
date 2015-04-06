@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+<h1><span class="heading">Listing Pets in the Shelter</span></h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Pet Type</th>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Description</th>
+      <th>Picture</th>
+      <th colspan="5"></th>
+    </tr>
+  </thead>
+
+  <tbody id="the_pets">
+    <%= render(@pets) %>
+  </tbody>
+</table>

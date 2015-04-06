@@ -1,0 +1,23 @@
+<h1> Cart Contents </h1>
+<table>
+	<thead>
+    <tr>
+      <th>Name</th>
+      <th colspan="1"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <%= render(cart.selected_pets) %>
+  </tbody>
+</table>
+<div id="cartbot">
+	<% if cart.selected_pets.count != 0 and !@adopting %>
+		<div id="empty"><%= button_to 'Empty Cart', cart_path(cart), method: :delete %></div>
+		<div id="adoptb"><%= button_to 'Adopt Now', adopt_path(cart.selected_pets) %></div>
+	<% else %>
+		<% if @adopting %>
+			<div id="empty"><%= button_to 'Empty Cart', cart_path(cart), method: :delete %></div>
+		<% end %>
+	<% end %>
+</div>
