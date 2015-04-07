@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Adoption Agreement</h1>
+
+<p>You have selected:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Description</th>
+      <th>Type</th>
+      <th>Picture</th>
+      <th colspan="5"></th>
+    </tr>
+  </thead>
+
+  <tbody id="the_pets">
+    <% @pets.each do |pet| %>
+      <tr>
+        <td><%= pet.name %></td>
+        <td><%= pet.age %></td>
+        <td><%= pet.description %></td>
+        <td><%= pet.pet_type %></td>
+        <td><%= image_tag(pet.picture, :class => "pet_image") %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<p>Do you promise to take good care of these critters?</p>
+
+<%= button_to 'I Agree!', @cart, method: :delete %>
+<br>
+<%= link_to 'No, I better not...', shelter_index_path %>
+
+<br>
+
+

@@ -1,0 +1,14 @@
+<% content_for :content do %>
+    <div id="sidebar">
+      <% if admin_signed_in? %>
+        <%= render 'tasks' %>
+      <% else %>
+        <%= render @cart %>
+      <% end %>
+    </div>
+    <div id="main">
+      <%= yield %>
+    </div>
+<% end %>
+
+<%= render template: "layouts/application" %>

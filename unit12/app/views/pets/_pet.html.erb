@@ -1,8 +1,12 @@
 <tr>
-    <td id="pet_typeCol"><%= pet.pet_type.humanize %></td>
-    <td id="nameCol"><%= pet.name %></td>
-    <td id="ageCol"><%= pet.age %></td>
-    <td id="descriptionCol"><%= pet.description %></td>
-    <td><%= image_tag(pet.picture, class: 'pet_img') %></td>
+  <td id="pet_typeCol"><%= pet.pet_type.humanize %></td>
+  <td id="nameCol"><%= pet.name %></td>
+  <td id="ageCol"><%= pet.age %></td>
+  <td id="descriptionCol"><%= pet.description %></td>
+  <td><%= image_tag(pet.picture, class: 'pet_img') %></td>
+
+  <% if user_signed_in? %>
     <td><%= button_to 'Select Pet!', selected_pets_path(pet_id: pet), remote: true %><td>
+  <% end %>
+
 </tr>

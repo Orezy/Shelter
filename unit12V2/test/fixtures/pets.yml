@@ -1,0 +1,47 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+selected:
+  id: 1
+  name: Fluffy
+  age: 3 months
+  description: playful and energetic
+
+another:
+  id: 2
+  name: Jean
+  age: 6 weeks
+  description: wild
+
+one:
+  name: MyString
+  age: MyString
+  description: MyStringForDescription
+
+two:
+  name: MyString
+  age: MyString
+  description: MyStringForDescription
+
+noname:
+  age: MyString
+  description: JustAnotherNamelessPet
+
+tooShort:
+  name: MyString
+  age: Mystring
+  description: ninechars
+
+tooLong:
+  name: MyString
+  age: Mystring
+  description: Thisneedstobefortyonecharacterssoblahblah
+
+lowerBound:
+  name: MyString
+  age: Mystring
+  description: justenough
+
+upperBound:
+  name: MyString
+  age: Mystring
+  description: Cannothavemorethanfortycharactersblahhhh
