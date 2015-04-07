@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Unit12</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <p class="navbar-text pull-right">
+  <% if user_signed_in? %>
+    Logged in as <strong><%= current_user.email %></strong>|
+    <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
+    <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>|
+    <%= link_to "Return to Homepage", root_url  %>|
+    <% if admin_signed_in? %>
+      Currently signed in as Admin
+    <% else %>
+      <%= link_to "Click here to login as an Admin", new_admin_session_path %>
+    <% end %>
+  <% else %>
+    <%= link_to "Our Homepage", root_url  %>|
+    <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
+    <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
+  <% end %>
+
+  <div id="header">
+    <%= image_tag "pets_img.jpg" %>
+    <h1>Percy's Pets</h1>
+  </div>
+
+  <% if alert %>
+    <p class="alert alert-danger"><%= alert %></p>
+  <% end %>
+
+  <div id="content">
+    <%= content_for?(:content) ? yield(:content) : yield %>
+  </div> 
+
+  <br><br>
+  <div id="footer">
+    &copy Copyright Percy P. Perciful, some rights reserved
+  </div>
+</body>
+</html>

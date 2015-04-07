@@ -1,0 +1,20 @@
+// Place all the styles related to the pets controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+/*Partials*/
+
+@import "header";
+@import "footer";
+
+th {
+  background-color: #FFFFF5;
+}
+
+tr:nth-child(even) {
+    background-color: #F0F0EA;
+}
+   
+tr:nth-child(odd) {
+    background-color: #E6E6DC;
+}

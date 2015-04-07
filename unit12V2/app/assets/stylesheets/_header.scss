@@ -1,0 +1,29 @@
+
+/*Header*/
+
+#header {
+  width: 95%;
+  color: red;
+  background-color: blue;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 300%;
+  text-align: center;
+  overflow: hidden;
+
+  img {
+    height: 10%;
+    width: 10%;
+    display: block;
+    vertical-align: middle;
+    float: left;
+    margin-left: auto;
+    padding: 1%;
+  }
+}
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}

@@ -1,0 +1,40 @@
+<% if admin_signed_in? %>
+  <p id="notice"><%= notice %></p>
+
+  <h1>Listing Pets</h1>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Description</th>
+        <th>Type</th>
+        <th>Picture</th>
+        <th colspan="5"></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @pets.each do |pet| %>
+        <tr>
+          <td><%= pet.name %></td>
+          <td><%= pet.age %></td>
+          <td><%= pet.description %></td>
+          <td><%= pet.pet_type %></td>
+          <td><%= image_tag(pet.picture, :class => "pet_image") %></td>
+          <td><%= link_to 'Show', pet %></td>
+          <td><%= link_to 'Edit', edit_pet_path(pet) %></td>
+          <td><%= link_to 'Destroy', pet, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <br>
+
+  <%= link_to 'New Pet', new_pet_path %>
+<% else %>
+  <h2>You must be logged in as an admin to view this page.<h2>
+  <%= link_to 'To Home', root_url %>
+<% end %>

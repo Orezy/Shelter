@@ -3,6 +3,7 @@ class SelectedPetsController < ApplicationController
   before_action :set_selected_pet , only: [:show, :edit, :update, :destroy]  
   before_action :set_cart , only: [:create, :destroy] 
   before_action :set_pets , only: [:create, :destroy]
+  before_action :authenticate_user!
 
   # GET /selected_pets
   # GET /selected_pets.json

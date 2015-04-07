@@ -1,0 +1,11 @@
+<% if admin_signed_in? %>
+  <h1>Editing Pet</h1>
+
+  <%= render 'form' %>
+
+  <%= link_to 'Show', @pet %> |
+  <%= link_to 'Back', pets_path %>
+<% else %>
+  <h2>You must be logged in as an admin to view this page.<h2>
+  <%= link_to 'To Home', root_url %>
+<% end %>
