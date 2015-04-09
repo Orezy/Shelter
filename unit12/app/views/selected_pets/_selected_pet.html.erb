@@ -1,0 +1,9 @@
+
+
+<tr class="cart_row">
+	<% if @adopting %>
+	<td><%= selected_pet.pet.name %> &nbsp <div class="cart_cell_button"> <%= button_to 'Remove', selected_pet_path(id: selected_pet.id), method: :delete%> <div> </td>
+	<% else %>
+	<td><%= selected_pet.pet.name %> &nbsp <div class="cart_cell_button"> <%= button_to 'Remove', selected_pet_path(id: selected_pet.id), method: :delete, remote: true %> <div> </td>
+	<% end %>
+</tr>

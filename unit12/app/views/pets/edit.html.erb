@@ -1,0 +1,12 @@
+<div id="main">
+
+	<h1>Editing Pet</h1>
+	<% if current_user.try(:admin?) %>
+		<%= render 'form' %>
+
+		<%= link_to 'Show', @pet %> |
+	<% else %>
+		<span id="error">Must be admin to view or edit pets.</span><br>
+	<% end %>
+	<%= link_to 'Back', pets_path %>
+</div>
