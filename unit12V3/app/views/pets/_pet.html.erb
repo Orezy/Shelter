@@ -1,0 +1,10 @@
+  <tr class="pet_row">
+    <td><%= pet.pet_type %></td>
+    <td><%= pet.name %></td>
+    <td><%= pet.age %></td>
+    <td><%= pet.description %></td>
+    <td><%= image_tag(pet.picture, class: 'pet_image') %></td>
+    <% if current_user != nil %>
+    	<td><%= button_to 'Select Pet', selected_pets_path(pet_id: pet), remote: true %></td>
+    <% end %>
+  </tr>

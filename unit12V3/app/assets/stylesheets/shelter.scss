@@ -1,0 +1,20 @@
+// Place all the styles related to the Shelter controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#cart {
+	background-color: #507C7C;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-bottom: 10px;
+	padding-top: 25px;
+	color: white;
+}
+
+#main {
+	padding: 10px;
+}
+
+#cart, #main {
+	float: left;
+}

@@ -1,0 +1,34 @@
+<div id="main">
+  <h1>Adoption Agreement</h1>
+
+  You have selected:
+
+  <table>
+    <thead>
+      <tr id="header_row">
+        <th>Pet Type</th>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Description</th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody id="pet_list">
+      <% @pets.each do |pet| %>
+        <%= render pet %>
+      <% end %>
+    </tbody>
+  </table>
+
+  Do you promise to take good care of these pets?
+
+  <br><br>
+  <%= button_to 'I agree!', shelter_finish_path, method: :get %>
+  <br><br>
+  <%= link_to 'No, I better not...', shelter_index_path %>
+
+
+<br>
+
+</div>

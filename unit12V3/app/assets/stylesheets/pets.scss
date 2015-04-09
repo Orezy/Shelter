@@ -1,0 +1,93 @@
+// Place all the styles related to the Pets controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+$header-footer-color: 	#85CECE;
+$font-color: 			#426767;
+$header-font: 			"Trebuchet MS", sans-serif;
+$logo-height:			88px;
+$logo-width: 			100px;
+$footer-height: 		55px;
+$even-row-color: 		#C6D1D1;
+$odd-row-color:			#CEEBEB;
+
+
+#header, #footer {
+	background: $header-footer-color;
+}
+
+#wrapper {
+	min-height: 80%;
+	// min-height: calc(100% - $footer-height);
+	// margin-bottom: $footer-height;
+}
+
+#wrapper.after {
+	display: block;
+}
+
+#footer, #wrapper.after {
+	height: $footer-height;
+}
+
+#header_hr {
+	margin-bottom: 0px;
+}
+
+#logo {
+	height: $logo-height;
+	width: $logo-width;
+	display: inline;
+	vertical-align: middle;
+}
+
+#header_title, #copyright_text {
+	color: $font-color;
+	font-family: $header-font;
+}
+
+#header_title {
+	
+	font-size: 3em;
+	display: inline-block;
+	padding-left: 200px;
+}
+
+#copyright_text {
+	padding: 3px;
+	font-family: $header-font;
+}
+
+.cart_row {
+	border-bottom: 1px dashed white;
+	border-top: 1px dashed white;
+	background-color: none;
+}
+
+.cart_cell_button, #adopt_button {
+	width: auto;
+	float: right;
+	overflow: hidden;
+}
+
+#empty_button {
+	width: auto;
+	float: left;
+	overflow: hidden;
+}
+
+.pet_row:nth-child(even) {
+	background-color: $even-row-color;
+}
+
+.pet_row:nth-child(odd):not(#header_row) {
+	background-color: $odd-row-color;
+}
+
+hr {
+	border-color: $font-color;
+}
+
+.pet_image {
+	width: 100px;
+}
